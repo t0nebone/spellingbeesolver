@@ -7,8 +7,8 @@ app = Flask(__name__)
 @app.route('/spellingbsolver', methods=['POST'])
 def do_search() -> str:
     strip = "[]"
-    center_letter = request.form['center_letter']
-    outside_letters = request.form['outside_letters']
+    center_letter = request.form['center_letter'].lower()
+    outside_letters = request.form['outside_letters'].lower()
     title = 'Spelling Bee Solved'
     results = str(search_for_words_web(center_letter, outside_letters)).strip(strip).replace("'", "")
 
