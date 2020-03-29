@@ -8,8 +8,8 @@ def search_for_words() -> list:
 
     all_words = words.words()
     alphabet = tuple(ascii_lowercase)
-    req_letter = input('Enter the center letter ')
-    oth_letters = input('Enter the supporting letters')
+    req_letter = input('Enter the center letter ').lower()
+    oth_letters = input('Enter the supporting letters').lower()
     all_letters = set(req_letter).union(set(oth_letters))
     wrong_letters = set(alphabet).difference(all_letters)
 
