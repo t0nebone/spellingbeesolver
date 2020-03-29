@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+    <h2>{{ the_title }}</h2>
+
+    <form method='POST' action='/spellingbsolver'>
+        <table>
+            <p>Solve your New York Times Spelling Bee...enter the letters below</p>
+            <tr>
+                <td>Center letter:</td>
+                <td><input name='center_letter' type='TEXT' width='60'></td>
+            </tr>
+            <tr>
+                <td>Outside letters:</td>
+                <td><input name='outside_letters' type='TEXT'></td>
+            </tr>
+        </table>
+        <p><input value='Solve it!' type='SUBMIT'></p>
+    </form>
+
+{% endblock %}

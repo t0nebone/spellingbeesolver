@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+    <h2>{{ the_title }}</h2>
+
+    <p>
+        <br>Center letter: <strong>{{ the_center_letter }}</strong>
+        <br>Outside letters: <strong>{{ the_outside_letters }}</strong>
+    </p>
+
+    <p>Here is all the words in the <a href="https://www.nltk.org/">NLTK's</a> English word list that are at least 5
+        letters long. (Excluding proper names and hyphenated words.) </p>
+    <h5>{{ the_results }}</h5>
+
+    <a href='/entry'>Start a new search</a>
+
+{% endblock %}
